@@ -1,23 +1,26 @@
 #include <stdio.h>
 
+
 /**
  * main - Entry point
  *
- * Description: print values of c from 0 to 9
+ * Description: print value of n satus; positive, negative or zero
  *
  * Return: Always 0 (Success)
- */
+*/
+
+
 int main(void)
 {
-    int c = 0;
-    
-    for (; c < 10; ) // Add the initialization part as well
-    {
-        printf("%i", c);
-        c++;
-    }
-    printf("\n");
+	int c = 0;
 
-    return (0);
+	while (c < 10)
+	{
+		printf("%i", c);
+		c++;
+	}
+	printf("\n");
+
+	return (0);
 }
 
