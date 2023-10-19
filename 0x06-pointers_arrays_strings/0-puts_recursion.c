@@ -1,16 +1,26 @@
-#include "main.h"
-
 /**
- * _puts_recursion - prints a string, followed by a new line
- * @s: string to print
- */
-void _puts_recursion(char *s)
+ * _strcat - function that concatenates
+ * two strings.
+ *
+ * @dest: pointer to array
+ * @src: pointer to array
+ *
+ * Return: pointer to array @dest
+*/
+
+char *_strcat(char *dest, char *src)
 {
-	if (*s == '\0')
+	int i, j;
+
+	i = 0;
+	while (dest[i])
 	{
-		_putchar('\n');
-		return;
+		i++;
 	}
-	_putchar(*s);
-	_puts_recursion(s + 1);
+	for (j = 0; src[j] ; j++)
+	{
+		dest[i++] = src[j];
+	}
+
+	return (dest);
 }
