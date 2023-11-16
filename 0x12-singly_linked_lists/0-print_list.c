@@ -1,31 +1,27 @@
-/*
- * 0x12. C - Singly linked lists
- * task 0
- * my solution depends on looping and change h "head" reference with the next h
- * and check if it equals null so it is the end
- */
 #include "lists.h"
+
 /**
- * print_list - print list of strings
- * @h: refrance of list_t "linked list of strings"
- * Return: list size
- */
+* print_list - prints all the elements of a list
+*
+* @h:pointer to the list
+*
+*Return: the number of nodes
+*/
+
 size_t print_list(const list_t *h)
 {
-	int size;
+const list_t *cursor = h;
+size_t count = 0;
 
-	size = 0;
-	if (h == NULL)
-		return (0);
+while (cursor != NULL)
+{
+if (cursor->str != NULL)
+printf("[%d] %s\n", cursor->len, cursor->str);
+else
+printf("[0] (nil)\n");
+count += 1;
+cursor = cursor->next;
+}
 
-	while (h)
-	{
-		if (h->str == NULL)
-			printf("[0] (nil)\n");
-		else
-			printf("[%d] %s\n", h->len, h->str);
-		h = h->next;
-		size++;
-	}
-	return (size);
+return (count);
 }
