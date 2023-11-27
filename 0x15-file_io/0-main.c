@@ -3,9 +3,11 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * read_textfile reads text from a file and prints it @filename: name of file to read
+ * @filename: name of file to read
+ * @letters: number of bytes to read
+ * 
+ * Return: number bytes read/printed
  */
 int main(int ac, char **av)
 {
